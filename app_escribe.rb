@@ -7,7 +7,7 @@ File.open('almacen.txt', "a") do  |f|
 	@fecha = Time.now.to_s
 	
 		if @lineas.empty? 
-			f.puts "1," + @texto +", #{Time.now.to_s}"
+			f.puts "1, " + @texto +", #{Time.now.to_s}"
 		else
 			ultimo = @file.last.to_s.split(/,/)[0].to_i.numerator + 1
 			@ultimo = ultimo.to_s
